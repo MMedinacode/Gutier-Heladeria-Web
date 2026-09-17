@@ -370,3 +370,16 @@ h1,h2,h3{ font-family:var(--font-display); font-weight:400; line-height:1.12; }
   .tab-panel{ animation:none; }
   .loader-cono{ animation:none; }
 }
+
+
+/* ══════════════════════════════════════════════════════════════
+   Parche 17-09-2026 — variables que se usaban sin declarar
+   ══════════════════════════════════════════════════════════════
+   Estas var() no existían en ninguna parte del archivo, así que
+   el navegador descartaba la propiedad entera y el elemento se
+   quedaba con el valor heredado. Se declaran apuntando al color
+   equivalente que el sitio ya tenía, para no inventar paleta. */
+:root{
+  --acento: var(--marino);
+  --suave: var(--celeste-sv);
+}

@@ -42,7 +42,7 @@
   - Atributos de la ficha de Google: "Amigable con LGBTQ+" y
     "Se identifica como mujer empresaria". Pet friendly sale de sus
     propias historias destacadas.
-  - 3 reseñas reales con nombre, copiadas de Google Maps.
+  - 3 reseñas con nombre, copiadas de Google Maps.
   - Fotos: descargadas de su Instagram público.
   - Evento real: música en vivo el sábado 12 de septiembre a las 18:00
     (flyer publicado por ellos mismos).
@@ -52,7 +52,7 @@
     productos quedan sin precio y el carrito muestra "A consultar" en vez
     de inventar montos. Pedirle la carta al local.
   - La carta lista solo productos CONFIRMADOS (por sus fotos, su bio y
-    sus reseñas). Falta la variedad completa de sabores de helado.
+    nuestras reseñas). Falta la variedad completa de sabores de helado.
   - Falta el logo real y fotos del interior completo del local.
   ============================================================
 -->
@@ -61,6 +61,77 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "IceCreamShop",
+  "name": "Gutier Heladería Artesanal",
+  "description": "Gutier Heladería Artesanal — helados artesanales, café y pastelería casera en Ciudad Satélite, Maipú. 4.9★ en Google. Pet friendly y con música en vivo.",
+  "image": "https://mmedinacode.github.io/Gutier-Heladeria-Web/fotos/pie-maracuya.jpg",
+  "url": "https://mmedinacode.github.io/Gutier-Heladeria-Web/",
+  "telephone": "+56949919342",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "CL",
+    "streetAddress": "Av. Parque Central Ote. 1132",
+    "addressLocality": "Ciudad Satélite",
+    "addressRegion": "Maipú"
+  },
+  "sameAs": [
+    "https://instagram.com/gutier_heladeria"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "14:30",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "14:30",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "14:30",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "14:30",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "12:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "12:00",
+      "closes": "20:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -399,5 +470,6 @@
 <script>window.REDES={"intro": "Heladería artesanal. El dueño responde personalmente cada reseña de Google y tiene el WhatsApp publicado en su bio.", "instagram": {"user": "gutier_heladeria", "fotos": ["fotos/galletas-new-york.jpg", "fotos/pie-maracuya.jpg", "fotos/producto2.jpg"]}, "whatsapp": {"numero": "56949919342", "nota": "Confirmado: el link wa.me está en su propia bio de Instagram."}};</script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
