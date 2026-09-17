@@ -8,17 +8,17 @@
    cada ítem y todo lo demás funciona igual.
 
    Los productos listados están CONFIRMADOS por sus propias fotos de
-   Instagram, su bio, y las reseñas reales de Google. No hay inventados.
+   Instagram, su bio, y las reseñas de Google. No hay inventados.
    ============================================================ */
 
 const MENU = {
   helados: {
     label: 'Helados',
     items: [
-      { n:'Helado artesanal', d:'Hecho en el local. "Variedad de sabores" según sus reseñas reales' },
+      { n:'Helado artesanal', d:'Hecho en el local. "Variedad de sabores", dicen nuestras reseñas' },
       { n:'Sabor torta',      d:'Con manjar — de los más nombrados en las opiniones de Google' },
-      { n:'Yogurt con frutilla', d:'Mencionado por nombre en una reseña real del local' },
-      { n:'Sabor menta',      d:'Aparece entre las palabras más repetidas de sus reseñas' },
+      { n:'Yogurt con frutilla', d:'Mencionado por nombre en una reseña' },
+      { n:'Sabor menta',      d:'Aparece entre las palabras más repetidas de nuestras reseñas' },
     ]
   },
   pasteleria: {
@@ -32,7 +32,7 @@ const MENU = {
   cafeteria: {
     label: 'Café y bebidas',
     items: [
-      { n:'Café', d:'"El café estaba delicioso, con un aroma…" — reseña real de Google' },
+      { n:'Café', d:'"El café estaba delicioso, con un aroma…" — de una reseña de Google' },
       { n:'Bebidas', d:'Ver la carta del local — tienen una sección propia de bebidas' },
     ]
   }
