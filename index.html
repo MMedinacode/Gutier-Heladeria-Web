@@ -44,7 +44,7 @@
     propias historias destacadas.
   - 3 reseñas con nombre, copiadas de Google Maps.
   - Fotos: descargadas de su Instagram público.
-  - Evento real: música en vivo el sábado 12 de septiembre a las 18:00
+  - Evento real: música en vivo el sábado 12 de septiembre a las 18:00 (ya pasó; 02-10: reemplazado por Maipú Cafetero 2026, sábado 10-10)
     (flyer publicado por ellos mismos).
 
   ⚠️ PENDIENTE / NUNCA INVENTADO:
@@ -60,7 +60,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=02102026">
 <link rel="stylesheet" href="pulido.css">
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -203,17 +203,29 @@
     </div>
   </div>
 
-  <!-- Evento real publicado por el propio local -->
-  <div class="evento reveal">
+  <!-- Evento real publicado por el propio local (Instagram, 28-09-2026) y la
+       fecha de Maipú Cafetero (bio de @maipucafetero.cl). Cada elemento con
+       data-hasta se esconde solo al día siguiente: la página nunca anuncia
+       algo vencido (pasó con la música de Fiestas Patrias del 12-09). -->
+  <div class="evento reveal" data-hasta="2026-10-10">
     <div class="wrap evento-inner">
       <div>
-        <span class="evento-tag">Este sábado</span>
-        <h3>Música en vivo por Fiestas Patrias</h3>
-        <p>Sábado 12 de septiembre, desde las 18:00 en el local.</p>
+        <span class="evento-tag">Sábado 10 de octubre</span>
+        <h3>Nos vemos en Maipú Cafetero 2026</h3>
+        <p>La coffee party más grande de Chile: de 9:00 a 21:00 en la Piscina Municipal de Maipú.</p>
+        <p data-hasta="2026-10-04"><strong>Concurso:</strong> sorteamos 2 entradas. El ganador se anuncia el domingo 4 de octubre.</p>
       </div>
-      <a class="btn btn-ghost btn-light" href="https://instagram.com/gutier_heladeria" target="_blank" rel="noopener">Ver en Instagram</a>
+      <a class="btn btn-ghost btn-light" href="https://www.instagram.com/gutier_heladeria/p/Dd2GsExOAFQ/" target="_blank" rel="noopener">Ver en Instagram</a>
     </div>
   </div>
+  <script>
+    (function () {
+      var hoy = new Date(); hoy = hoy.getFullYear() + '-' + ('0' + (hoy.getMonth() + 1)).slice(-2) + '-' + ('0' + hoy.getDate()).slice(-2);
+      Array.prototype.forEach.call(document.querySelectorAll('[data-hasta]'), function (el) {
+        if (hoy > el.getAttribute('data-hasta')) el.style.display = 'none';
+      });
+    })();
+  </script>
 
   <div class="section">
     <div class="wrap">
@@ -461,10 +473,10 @@
 
 <script src="vida.js"></script>
 <script src="carta-fotos.js"></script>
-<script src="script.js"></script>
+<script src="script.js?v=02102026"></script>
 <script src="carrito.js"></script>
-<!-- Horario REAL de su ficha de Google Maps (11-09-2026). El módulo horario.js pinta la semana completa y el estado en vivo. -->
-<script>window.HORARIO={dias:["Cerrado","14:30 - 20:00","14:30 - 20:00","14:30 - 20:00","14:30 - 20:00","12:00 - 20:00","12:00 - 20:00"],fuente:"Google Maps, 11-09-2026"};</script>
+<!-- Horario de su bio de Instagram (02-10-2026): martes a viernes 14:30-21:00, sábado y domingo 12:00-21:00. Google decía hasta las 20:00; manda el material del propio local. -->
+<script>window.HORARIO={dias:["Cerrado","14:30 - 21:00","14:30 - 21:00","14:30 - 21:00","14:30 - 21:00","12:00 - 21:00","12:00 - 21:00"],fuente:"Bio de Instagram, 02-10-2026"};</script>
 <script src="horario.js"></script>
 <!-- Redes sociales REALES del local, verificadas una por una. El modulo redes.js arma con esto la pestana Redes. -->
 <script>window.REDES={"intro": "Heladería artesanal. El dueño responde personalmente cada reseña de Google y tiene el WhatsApp publicado en su bio.", "instagram": {"user": "gutier_heladeria", "fotos": ["fotos/galletas-new-york.jpg", "fotos/pie-maracuya.jpg", "fotos/producto2.jpg"]}, "whatsapp": {"numero": "56949919342", "nota": "Confirmado: el link wa.me está en su propia bio de Instagram."},

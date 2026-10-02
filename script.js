@@ -26,6 +26,8 @@ const MENU = {
     items: [
       { n:'Pie de maracuyá', d:'Casero, con merengue italiano', img:'fotos/pie-maracuya.jpg' },
       { n:'Galletas New York', d:'Hechas a mano, en su envoltorio de papel kraft', img:'fotos/galletas-new-york.jpg' },
+      { n:'Cheesecake', d:'Suave y cremoso' },                       // su Instagram, 27-09-2026
+      { n:'Torta 4 leches', d:'Un placer en forma de 4 leches', img:'fotos/producto4.jpg' },   // su Instagram, 23-08-2026
       { n:'Dulcecitos del día', d:'La vitrina cambia según lo que se hornea ese día' },
     ]
   },
@@ -33,7 +35,7 @@ const MENU = {
     label: 'Café y bebidas',
     items: [
       { n:'Café', d:'"El café estaba delicioso, con un aroma…" — de una reseña de Google' },
-      { n:'Bebidas', d:'Ver la carta del local — tienen una sección propia de bebidas' },
+      { n:'Bebidas', d:'Pregúntanos por las bebidas del día' },
     ]
   }
 };
